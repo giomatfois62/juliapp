@@ -2,7 +2,7 @@
 A Julia and Mandelbrot sets generator and navigator
 
 Instructions to build:
-- make
+- make  
 or
 - cmake . && make
 
