@@ -48,6 +48,11 @@ void gl::Shader::setFloat(const std::string &name, const float &value)
 	glUniform1f(uniformLocation(name), value);
 }
 
+void gl::Shader::setDouble(const std::string &name, const double &value)
+{
+	glUniform1d(uniformLocation(name), value);
+}
+
 void gl::Shader::setVec2(const std::string &name, const glm::vec2 &value)
 {
 	glUniform2f(uniformLocation(name), value[0], value[1]);
@@ -132,6 +137,11 @@ int Shader::uniformLocation(const string &name)
 	}
 
 	return it->second;
+}
+
+Texture::Texture() : id(0)
+{
+    
 }
 
 Texture::Texture(unsigned int id, const char *type, const char *path) :

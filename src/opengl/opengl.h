@@ -33,6 +33,7 @@ namespace gl {
 			void setMat3(const std::string &name, const glm::mat3 &value);
 			void setInt(const std::string &name, const int &value);
 			void setFloat(const std::string &name, const float &value);
+            void setDouble(const std::string &name, const double &value);
             void setVec2(const std::string &name, const glm::vec2 &value);
             void setVec4(const std::string &name, const glm::vec4 &value);
 
@@ -55,6 +56,7 @@ namespace gl {
 			std::string type;
 			std::string path;
 
+            Texture();
 			Texture(unsigned int id, const char* type, const char* path);
 
 			static Texture loadFromPath(const char* path, const char* type);

@@ -27,7 +27,7 @@ Mesh triangle()
     return Mesh(vertices, indices, textures);
 }
 
-Mesh quad()
+Mesh *quad()
 {
     std::vector<Vertex> vertices = {
         {{-1,-1,0}, {0,0,1}, {0,1,0}, {0,0}},
@@ -42,7 +42,7 @@ Mesh quad()
 	Texture::loadFromPath("res/smile.png", "texture_diffuse")
 	};
 
-    return Mesh(vertices, indices, textures);
+    return new Mesh(vertices, indices, textures);
 }
 
 Mesh* grid(double minX, double maxX, double minY, double maxY, size_t Nx, size_t Ny)
